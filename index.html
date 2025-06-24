@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will You Marry Me?</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 3em;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .yes {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    .no {
+      background-color: #adb5bd;
+      color: white;
+    }
+
+    .yes.big {
+      transform: scale(1.4);
+    }
+  </style>
+</head>
+<body>
+  <h1 id="question">Will you marry me?</h1>
+  <div class="buttons">
+    <button class="yes" id="yesBtn">Yes 💍</button>
+    <button class="no" id="noBtn">No 🙈</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("click", () => {
+      noBtn.style.display = "none";
+      yesBtn.textContent = "Yes 💖";
+      yesBtn.classList.add("big");
+    });
+
+    yesBtn.addEventListener("click", () => {
+      alert("Awww! I knew you'd say YES! 💕💍");
+    });
+  </script>
+</body>
+</html>
